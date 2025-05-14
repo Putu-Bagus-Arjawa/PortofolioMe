@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+
+@theme{
+  --color-primary: #2e2e2e;
+  --color-secondary:#3f3f3f;
+  --color-triary: #b1b1b1;
+  --font-archivoBlack: "Archivo Black", sans-serif;
+}
+
+
+

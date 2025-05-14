@@ -1,0 +1,30 @@
+import { FaInstagram, FaRegPaperPlane } from "react-icons/fa"
+import aku from "../assets/Me.png"
+import { CiLinkedin } from "react-icons/ci"
+import { IoLogoGithub } from "react-icons/io"
+
+const Home = () => {
+  return (
+    <section className="sm:h-screen h-auto mb-8 w-full flex justify-center items-center">
+        <article className="flex  justify-center items-center gap-x-8">
+            <article className="w-1/2 flex flex-col gap-y-8">
+                <h1 className="text-2xl md:text-4xl text-primary font-archivoBlack">I'm Arjawa✋</h1>
+                <div className="text-primary flex justify-center items-center gap-x-4 text-2xl md:text-3xl">
+                    <div className="h-[0.5px] w-12 bg-primary"></div>
+                        Website Frontend Enthusiast
+                </div>
+                <p className="text-secondary">I'm Undergraduated Informatics at Udayana University and I'm looking for opportunities in Frontend Web Developer</p>
+                <div className="flex gap-x-8">
+                    <button className="text-4xl"><CiLinkedin/></button>
+                    <button className="text-4xl"><FaInstagram/></button>
+                    <button className="text-4xl"><IoLogoGithub/></button>
+                </div>
+                <button><a href="#about" className="shadow-xl w-5/6 md:w-1/2 flex justify-center items-center gap-x-4 bg-primary rounded-3xl px-4 py-2 text-white hover:bg-triary hover:text-black">Say Hello <FaRegPaperPlane/></a></button>
+            </article>
+            <img src={aku} alt=""  className="w-1/5 h-1/5"/>
+        </article>
+    </section>
+  )
+}
+
+export default Home
