@@ -17,7 +17,7 @@ const CardProject = ({name, desc,linkGithub, linkProject, iconGithub, iconBrowse
         <div className="w-4/5 h-50 overflow-hidden brightness-105 rounded-2xl">
                     <img src={imagePreview} className="object-cover w-full h-full rounded-2xl hover:scale-110 active:scale-110"/>
         </div>
-        <h3 className="text-white text-2xl mb-2">{name}</h3>
+        <h3 className="text-white text-2xl mb-2 font-Delius">{name}</h3>
             {[...techStack].map((item, i)=>(
                 <div key={i} className="flex justify-between w-full gap-2 mb-4">
                     {item.map((it, idx)=>(

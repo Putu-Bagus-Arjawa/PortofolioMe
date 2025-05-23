@@ -1,6 +1,6 @@
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
 import { SiTailwindcss, SiMysql, SiExpress } from "react-icons/si";
-
+import { motion } from "motion/react";
 const skills = [
   { name: "React", icon: <FaReact className="text-blue-500" size={40} /> },
   { name: "Tailwind", icon: <SiTailwindcss className="text-cyan-400" size={40} /> },
@@ -17,18 +17,24 @@ const MySkill = () => {
     <section className="h-screen">
       <div className="max-w-4xl mx-auto py-8 px-4">
         <h2 className="text-2xl md:text-3xl text-primary
-         font-bold text-center mb-24 font-archivoBlack">My Skills</h2>
+         font-bold text-center mb-40 font-LuckiestGuy">My Skills</h2>
         
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg p-6 shadow-md flex flex-col items-center hover:scale-105 transition-transform"
-            >
-              {skill.icon}
-              <h3 className="text-lg font-semibold mt-3">{skill.name}</h3>
-            </div>
-          ))}
+        <div 
+          className="flex gap-4 max-w-3xl p-4 overflow-hidden">
+          <motion.div
+             animate ={{ x: ['0', '-50%'], transition:{duration: 6, ease:"linear", repeat:Infinity} }}
+             className="flex"
+          >
+            {[...skills, ...skills].map((skill, index) => (
+              <div
+                key={index}
+                className="mx-4 p-4 bg-triary rounded-full w-30 flex flex-col items-center"
+              >
+                <div>              {skill.icon}</div>
+                <h3 className="text-lg font-semibold mt-3">{skill.name}</h3>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>

@@ -96,7 +96,7 @@ const MyProject = () => {
           ))}
         </div>
         <div className="mb-8">
-          <h1 className="text-primary text-2xl md:text-3xl md:text-end text-center font-archivoBlack">My Project</h1>
+          <h1 className="text-primary text-2xl md:text-3xl md:text-end text-center font-LuckiestGuy">My Project</h1>
           <p className="text-secondary md:text-end text-center">The Project I've made so far</p>
         </div>
       </header>
