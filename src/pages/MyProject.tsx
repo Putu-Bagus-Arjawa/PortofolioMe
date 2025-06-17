@@ -20,7 +20,6 @@ const MyProject = () => {
       {
         name:"Wedding Invitation", 
         type: "personal", 
-        desc: "A website for wedding invitations design with modern look and engage animations", 
         linkGithub: "https://github.com/Putu-Bagus-Arjawa/WeddingInvitationsReactTailwind", 
         linkOnline: "https://weddinginvitations-ashen.vercel.app/", 
         iconGithub: <IoLogoGithub/>,
@@ -31,7 +30,6 @@ const MyProject = () => {
                   {
         name:"Donate-Nature", 
         type: "personal", 
-        desc: "Donate Nature is a non-profit organization that moves in nature preservation, main focus on donation for planting plant or give education in school", 
         linkGithub: "https://github.com/Putu-Bagus-Arjawa/DonateNatureReactTailwindWebsite", 
         linkOnline: "https://donate-nature.vercel.app/", 
         iconGithub: <IoLogoGithub/>,
@@ -42,7 +40,6 @@ const MyProject = () => {
                   {
         name:"Book CRUD", 
         type: "personal", 
-        desc: "CRUD simple book website", 
         linkGithub: "https://github.com/Putu-Bagus-Arjawa/WeddingInvitationsReactTailwind", 
         linkOnline: "https://weddinginvitations-ashen.vercel.app/", 
         iconGithub: <IoLogoGithub/>,
@@ -53,7 +50,6 @@ const MyProject = () => {
             {
         name:"TalkerinYuk", 
         type: "personal", 
-        desc: "Website untuk berkencan dan mengobrol, segmentasi pasarnya adalah anak muda berusia 18-25 tahun, layanan kami adalah memberikan jaminan kepuasan dalam berkencan atau mengobrol tanpa takut di-judge.", 
         linkGithub: "https://github.com/Putu-Bagus-Arjawa/WeddingInvitationsReactTailwind", 
         linkOnline: "https://weddinginvitations-ashen.vercel.app/", 
         iconGithub: <IoLogoGithub/>,
@@ -105,14 +101,14 @@ const MyProject = () => {
         <article className="sm:ml-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4">
             
             {  tab == "all"? myProject.slice(current, current + viewing).map((item, i)=>(
-              <CardProject name={item.name} desc={item.desc} linkGithub={item.linkGithub} linkProject={item.linkOnline} imagePreview={item.imagenya} iconBrowser ={item.iconBrowser} iconGithub={item.iconGithub} key={i} techStack={item.techStacknya}/>
+              <CardProject name={item.name} linkGithub={item.linkGithub} linkProject={item.linkOnline} imagePreview={item.imagenya} iconBrowser ={item.iconBrowser} iconGithub={item.iconGithub} key={i} techStack={item.techStacknya}/>
             )):
                 myProject.slice(current, current + viewing).filter(e=> e.type == tab).length > 0? 
                   myProject
                   .slice(current, viewing + current)
                   .filter(e=> e.type == tab)
                   .map((item, idx)=>(
-                      <CardProject name={item.name} desc={item.desc} linkGithub={item.linkGithub} linkProject={item.linkOnline} imagePreview={item.imagenya} iconBrowser ={item.iconBrowser} iconGithub={item.iconGithub} key={idx} techStack={item.techStacknya}/>
+                      <CardProject name={item.name} linkGithub={item.linkGithub} linkProject={item.linkOnline} imagePreview={item.imagenya} iconBrowser ={item.iconBrowser} iconGithub={item.iconGithub} key={idx} techStack={item.techStacknya}/>
                     )
             )
             :<p className="text-red-600">Data yang anda cari tidak ada</p>}

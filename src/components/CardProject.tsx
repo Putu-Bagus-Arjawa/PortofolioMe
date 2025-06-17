@@ -7,11 +7,10 @@ import type { ReactElement } from "react"
         iconBrowser: ReactElement
         techStack: ReactElement [][]
         imagePreview: string
-        desc: string
         name: string
     }
     
-const CardProject = ({name, desc,linkGithub, linkProject, iconGithub, iconBrowser, imagePreview, techStack}:CardProperty) => {
+const CardProject = ({name,linkGithub, linkProject, iconGithub, iconBrowser, imagePreview, techStack}:CardProperty) => {
   return (
     <div className="bg-primary w-full md:w-4/5 p-4 shadow-2xl rounded-2xl flex flex-col items-center justify-between">
         <div className="w-4/5 h-50 overflow-hidden brightness-105 rounded-2xl">
@@ -27,7 +26,6 @@ const CardProject = ({name, desc,linkGithub, linkProject, iconGithub, iconBrowse
                     ))}
                 </div>
             ))}        
-        <p className="text-triary mb-4">{desc}</p>
         <div className="flex justify-evenly items-end w-full">
             <button className="text-5xl active:text-triary hover:text-triary"><a href={linkGithub} className="text-center">{iconGithub} </a></button>
             <button className="text-5xl active:text-triary hover:text-triary"><a href={linkProject}>{iconBrowser}</a></button>

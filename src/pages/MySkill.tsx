@@ -20,7 +20,7 @@ const MySkill = () => {
          font-bold text-center mb-40 font-LuckiestGuy">My Skills</h2>
         
         <div 
-          className="flex gap-4 max-w-3xl p-4 overflow-hidden">
+          className="flex gap-4 max-w-3xl p-4 overflow-hidden shadow-purple-600 shadow-2xl">
           <motion.div
              animate ={{ x: ['0', '-50%'], transition:{duration: 6, ease:"linear", repeat:Infinity} }}
              className="flex"
@@ -28,7 +28,7 @@ const MySkill = () => {
             {[...skills, ...skills].map((skill, index) => (
               <div
                 key={index}
-                className="mx-4 p-4 bg-triary rounded-full w-30 flex flex-col items-center"
+                className=" mx-4 p-4 bg-triary rounded-full w-30 flex flex-col items-center"
               >
                 <div>              {skill.icon}</div>
                 <h3 className="text-lg font-semibold mt-3">{skill.name}</h3>

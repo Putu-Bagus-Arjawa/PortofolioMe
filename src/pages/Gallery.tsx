@@ -14,15 +14,9 @@ const Gallery = () => {
     me, me2, spr, web1, web2
   ]
 
-  const positions = [
-    "center",
-    "left1",
-    "left",
-    "right",
-    "right1"
-  ]
+  const positions = ["left","left1", "center","right","right1"]
 
-  const [positIdx, setPositIdx] = useState([0,1,2,3,4])
+  const [positIdx, setPositIdx] = useState([3,2,1,4,0])
 
   const imageVariants = {
     center: {x: "0%", scale: 1, zIndex: 5},
@@ -46,8 +40,8 @@ const Gallery = () => {
           key={i}
           src={image}
           alt={image}
-          className="w-50 h-50 absolute"
-          initial= "left1"
+          className="rounded-3xl shadow-purple-600 shadow-2xl w-50 h-50 absolute"
+          initial= {positions[positIdx[i]]}
           animate= {positions[positIdx[i]]}
           variants={imageVariants}
           transition={{ duration: 1, ease: "easeInOut" }}
@@ -55,7 +49,7 @@ const Gallery = () => {
 
         />
       ))}
-      <button className="text-white mt-[400px]" onClick={handleNext}>Next</button>
+      <button className="text-white mt-[400px] rounded-2xl bg-purple-800 px-4 py-2 hover:bg-purple-400  hover:text-black" onClick={handleNext}>Next</button>
     </div>
   )
 }

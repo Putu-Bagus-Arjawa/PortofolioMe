@@ -2,11 +2,19 @@
 
 
 @theme{
-  --color-primary: #222831;
-  --color-secondary:#393E46;
-  --color-triary: #948979;
+  --color-primary: #304;
+  --color-secondary:#ddffdd;
+  --color-triary: #dfdf;
   --font-LuckiestGuy: "Luckiest Guy", cursive;
   --font-Delius: "Delius", cursive;
+}
+
+@layer base{
+  .comp{
+    background: url("../src/assets/mehill.png");
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 
